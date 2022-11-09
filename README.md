@@ -39,6 +39,18 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Deployment
+
+Deploy the repository to projectsunshare's github pages
+
+```
+yarn deploy
+```
+
+BUG: yarn build, yarn deploy doesn't work on vscode terminal, use powershell or cmd
+
+[reference](https://github.com/gitname/react-gh-pages)
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
