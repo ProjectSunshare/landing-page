@@ -6,10 +6,10 @@ const Mainpage = () => {
   return (
     <React.Fragment>
       <section>
-        <div className='h-[110px] w-full'>
+        <div className='h-[100px] w-full'>
           <Navbar />
         </div>
-        <div className='container m-auto'>
+        <div className='w-full'>
           <Navpage />
         </div>
       </section>
