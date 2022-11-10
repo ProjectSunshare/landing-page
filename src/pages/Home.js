@@ -1,8 +1,14 @@
 import React from 'react'
 
+import Hero from '../components/Hero/Hero'
+
 const Home = () => {
   return (
     <React.Fragment>
+      <Hero />
+
+
+
       <div className='w-full text-black text-center'>
       <div>Home</div>
       <div>Home</div>

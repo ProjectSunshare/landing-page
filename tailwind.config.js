@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultThemes = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -17,6 +18,11 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+    },
+    
+    fontFamily: {
+      'Space-Grotesk': ["'Space Grotesk', sans-serif", ...defaultThemes.fontFamily.sans],
+      'Poppins': ["'Poppins', sans-serif", ...defaultThemes.fontFamily.sans]
     },
   },
   plugins: [],

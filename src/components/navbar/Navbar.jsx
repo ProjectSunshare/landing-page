@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import {Bars3Icon, XCircleIcon} from '@heroicons/react/24/outline'
@@ -6,6 +6,9 @@ import {Bars3Icon, XCircleIcon} from '@heroicons/react/24/outline'
 import logo from '../../assets/img/logo/logo.png'
 
 import { MenuItems } from  './MenuItems'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Navbar = () => {
   // if the navlink is active or not, give this style
@@ -17,12 +20,30 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
   const handleClose = () => setNav(!nav)
 
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true)
+  }, []);
+
+  const menuRef = useRef();
+
+  const handleClickOutside = (e) => {
+    if (!menuRef.current.contains(e.target)){
+      setNav(false)
+    }
+  }   
+
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
-    <div className='w-screen h-[100px] z-10 bg-slate-50 fixed drop-shadow-lg'>
+    <div className='w-screen h-[100px] z-10 bg-slate-50 fixed drop-shadow-lg' data-aos="fade-down">
       {/* start normal navbar */}
       <div className="container mx-auto px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
-          <img src={logo} alt="logo" className='w-full'/>
+          <NavLink to={"/"}>
+            <img src={logo} alt="logo" className='w-full'/>
+          </NavLink>
         </div>
 
         <div className=''>
@@ -64,23 +85,24 @@ const Navbar = () => {
                            bg-[#FEA803]
                            text-white
                            border-2 border-black
-                           hover:bg-[#F7931E] hover:text-white
+                           transition-all
+                           hover:bg-[#F7931E]
                            rounded-lg
                            '>Launch App</button>
         </div>
 
         <div className='md:hidden bg-[#FEA803] border-2 border-black rounded-md' onClick={handleClick}>
-          {!nav ? <Bars3Icon className='w-8 transition-all'/> : <XCircleIcon className='w-8' />}
+          {!nav ? <Bars3Icon className='w-8'/> : <XCircleIcon className='w-8' />}
         </div>
       </div>
       {/* end normal navbar */}
 
 
       {/* start drop down menu */}
-      <ul className={!nav ? 'opacity-0' : 'Absolute bg-slate-50 w-full px-8'}>
+      <ul className={!nav ? 'hidden' : 'Absolute bg-slate-50 w-full px-8 md:hidden'} ref={menuRef} data-aos="fade-down">
         {MenuItems.map((item) => {
           return (
-            <NavLink to={item.url} onClick={handleClose} className='flex p-5 py-2 border-b-2 border-zinc-300 w-full'>
+            <NavLink to={item.url} onClick={handleClose} className='flex p-5 py-2 border-b-2 border-zinc-300 w-full hover:bg-zinc-300 hover:rounded-md hover:border-[#d9d9d9]'>
               {item.title}
             </NavLink>
           )
