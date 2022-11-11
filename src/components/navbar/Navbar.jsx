@@ -46,7 +46,7 @@ const Navbar = () => {
       {/* start normal navbar */}
       <div className="container mx-auto px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
-          <NavLink to={"/"}>
+          <NavLink to={"/landing-page"}>
             <img src={logo} alt="logo" className='w-full'/>
           </NavLink>
         </div>

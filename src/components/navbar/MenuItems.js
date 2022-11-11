@@ -2,7 +2,7 @@ export const MenuItems = [
   {
     id: '1',
     title: 'Home',
-    url: '/',
+    url: '/landing-page',
     cName: 'px-6 py-2'
   },
   {
