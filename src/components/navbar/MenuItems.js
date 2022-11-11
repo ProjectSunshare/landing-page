@@ -2,6 +2,8 @@ export const MenuItems = [
   {
     id: '1',
     title: 'Home',
+    // url: '/'
+    // replace this line of code (↓) with this (↑) if deployed with own domain
     url: '/landing-page',
     cName: 'px-6 py-2'
   },
