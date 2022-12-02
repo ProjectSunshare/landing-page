@@ -19,4 +19,20 @@
   button {
     @apply font-Space-Grotesk font-[500]
   }
+
+  h2 {
+    @apply text-center text-[38px] font-semibold 
+  }
+
+  .offer h4 {
+    @apply text-[32px] font-semibold
+  }
+
+  .token-details h4 {
+    @apply text-[32px] font-semibold pb-5
+  }
+
+  .list-title {
+    @apply font-semibold text-[18px] mb-5
+  }
 }
