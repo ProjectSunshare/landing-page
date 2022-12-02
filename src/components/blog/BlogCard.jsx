@@ -13,7 +13,7 @@ const BlogCard = () => {
 					<img
 						src={avatar}
 						className="rounded-full border-8 border-[#D9D9D9] absolute left-5 bottom-[70px]"
-						alt="image"
+						alt="User"
 					/>
 				</div>
 				<div className="blog-header bg-[#D9D9D9] w-80 py-5 pl-28 border-[#FFFFFF] border-t-4 rounded-b-lg pr-12 2xl:w-96">
