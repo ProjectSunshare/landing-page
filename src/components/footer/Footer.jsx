@@ -8,14 +8,14 @@ import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
 	const activeLink = 'flex text-white transition-all '
-  const normalLink = 'flex text-white hover:transition-all ease-in-out delay-100 duration-500 hover:text-neutral-400'
+	const normalLink = 'flex text-white hover:transition-all ease-in-out delay-100 duration-500 hover:text-neutral-400'
 
 	return (
 		<div>
 			<div className="pt-20 pb-28 lg:grid lg:grid-cols-2">
 				<div className="about-section pr-0 mx-5 md:pr-16">
 					<a href="/landing-page">
-						<img className="mb-2.5" src={BWLogo} alt=""/>
+						<img className="mb-2.5" src={BWLogo} alt="" />
 					</a>
 					<p className="md:mr-52 align-left">
 						Sunshare is a renewable energy blockchain marketplace application
@@ -28,9 +28,9 @@ const Footer = () => {
 						<ul className="md:mx-2">
 							{MenuItems.map((item) => {
 								return (
-									<NavLink key={item.id} to={item.url} className={({ isActive }) => isActive ? activeLink:normalLink}>
+									<NavLink key={item.id} to={item.url} className={({ isActive }) => isActive ? activeLink : normalLink}>
 										{item.title}
-										
+
 									</NavLink>
 								)
 							})}
@@ -46,13 +46,13 @@ const Footer = () => {
 							<li>projectsunshare@uc-bcf.edu.ph</li>
 							<li>uc.projectsunshare@gmail.com</li>
 							<li>
-								<a href="/404">
+								<a href="/badpage">
 									<img src={Twitter} alt="" className="inline pr-5" />
 								</a>
-								<a href="/404">
+								<a href="/badpage">
 									<img src={Github} alt="" className="inline pr-5" />
 								</a>
-								<a href="/404">
+								<a href="/badpage">
 									<img src={Discord} alt="" className="inline pr-5" />
 								</a>
 							</li>
