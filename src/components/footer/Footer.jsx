@@ -14,7 +14,7 @@ const Footer = () => {
 		<div>
 			<div className="pt-20 pb-28 lg:grid lg:grid-cols-2">
 				<div className="about-section pr-0 mx-5 md:pr-16">
-					<a href="/landing-page">
+					<a href="/">
 						<img className="mb-2.5" src={BWLogo} alt="" />
 					</a>
 					<p className="md:mr-52 align-left">
