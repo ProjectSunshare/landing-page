@@ -44,7 +44,7 @@ const NotFound = () => {
 						</p>
 
 						<button class="px-4 inline py-2 text-sm font-medium leading-5 shadow text-white transition-colors duration-150 border-2 border-black rounded-lg focus:outline-none focus:shadow-outline-blue bg-[#FEA803] active:bg-[#F7931E] hover:bg-[#F7931E]">
-							<a href="/landing-page">Back to Homepage</a>
+							<a href="/">Back to Homepage</a>
 						</button>
 					</div>
 					<div class="max-w-lg">
