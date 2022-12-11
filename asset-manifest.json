@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.a85bc4a0.css",
-    "main.js": "/static/js/main.5d83c6ae.js",
-    "static/media/sunshareToken.svg": "/static/media/sunshareToken.63bf16560b9e61bdf0a009b5df0e798f.svg",
-    "static/media/marketplace.svg": "/static/media/marketplace.741e066e41b997241c4df3d67d2e69d8.svg",
-    "static/media/eventImage.svg": "/static/media/eventImage.a4a5e8b5b2afa2f94026a84e2927af25.svg",
-    "static/media/house.svg": "/static/media/house.7ede970e4f14118fa2bf0ac0fafe86ba.svg",
-    "static/media/analysis.svg": "/static/media/analysis.c2ef4ba773820eb3df6922897bdac956.svg",
+    "main.css": "/static/css/main.c6df004b.css",
+    "main.js": "/static/js/main.3cc9367a.js",
+    "static/media/sunshareToken.svg": "/static/media/sunshareToken.1bf7f482ab0da8c1ca6826ac9e605383.svg",
+    "static/media/marketplace.svg": "/static/media/marketplace.447e8e041f603ebc20e80427a242a0db.svg",
+    "static/media/bw-sunshare.svg": "/static/media/bw-sunshare.791da2ed3196d661ceca987f9c598109.svg",
+    "static/media/eventImage.svg": "/static/media/eventImage.408d57517e801430cadc256037a32c55.svg",
+    "static/media/house.svg": "/static/media/house.68d2ac605594d8c52608e3d553226040.svg",
+    "static/media/analysis.svg": "/static/media/analysis.3a1255bbdb28678a9ea0269e26aee1fe.svg",
     "static/media/land.png": "/static/media/land.6f1462ccdc987df0bcb1.png",
     "static/media/panel.png": "/static/media/panel.b13ad7fb9e3b2a4d4365.png",
     "static/media/cloud_left_1.png": "/static/media/cloud_left_1.06a33c2c3132634422ce.png",
@@ -16,13 +17,18 @@
     "static/media/cloud_right_2.png": "/static/media/cloud_right_2.ee7c4d73460d6ac1ae31.png",
     "static/media/cloud_right_1.png": "/static/media/cloud_right_1.145173f74bbbf167e4d4.png",
     "static/media/blogPlaceholder.png": "/static/media/blogPlaceholder.7bb61389ea6552b788c8.png",
-    "static/media/metamask.svg": "/static/media/metamask.9e7d3abddbbcadcb03eaf39858553e80.svg",
+    "static/media/metamask.svg": "/static/media/metamask.cb741d11d5e5a9e4e6e6.svg",
+    "static/media/Discord.svg": "/static/media/Discord.8bc04ab850a861c726e1a5b3fdb6eb80.svg",
+    "static/media/Github.svg": "/static/media/Github.e8b0efdc5981a9d5910261bbb3b9ef8d.svg",
+    "static/media/Twitter.svg": "/static/media/Twitter.56c8a57718b56bb23bfb14bae72d4f86.svg",
+    "static/media/polygon.svg": "/static/media/polygon.2f48ca1f9974da49d7bc.svg",
     "index.html": "/index.html",
-    "main.a85bc4a0.css.map": "/static/css/main.a85bc4a0.css.map",
-    "main.5d83c6ae.js.map": "/static/js/main.5d83c6ae.js.map"
+    "static/media/ethereum.svg": "/static/media/ethereum.9f3bd21910d826ce8bb3.svg",
+    "main.c6df004b.css.map": "/static/css/main.c6df004b.css.map",
+    "main.3cc9367a.js.map": "/static/js/main.3cc9367a.js.map"
   },
   "entrypoints": [
-    "static/css/main.a85bc4a0.css",
-    "static/js/main.5d83c6ae.js"
+    "static/css/main.c6df004b.css",
+    "static/js/main.3cc9367a.js"
   ]
 }
