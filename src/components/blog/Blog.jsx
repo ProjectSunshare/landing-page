@@ -15,7 +15,7 @@ const Blog = () => {
 			<div className="large-title pb-20">
 				<h2>Thought Starters</h2>
 			</div>
-			<div className="grid md:grid-cols-3 max-w-[1920px] m-auto gap-y-10">
+			<div className="grid row-gap-8 sm:row-gap-0 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] m-auto gap-y-10">
 				<BlogCard />
 				<BlogCard />
 				<BlogCard />

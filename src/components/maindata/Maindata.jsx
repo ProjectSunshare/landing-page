@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function Maindata() {
+  useEffect(() => {
+    AOS.init();
+  });
+
   return (
-    <div className="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" data-aos="fade-down" data-aos-delay="250" data-aos-duration="1000">
       <div className='rounded-2xl drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] bg-[#F7931E]'>
         <div className="rounded-2xl bg-[#FFFFFF] bg-opacity-25 grid row-gap-8 sm:row-gap-0 sm:grid-cols-2 lg:grid-cols-4">
 

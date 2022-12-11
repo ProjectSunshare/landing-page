@@ -35,7 +35,7 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div className="w-full">
+			<div className="w-full text-black text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
 				<Divider1 />
 			</div>
 

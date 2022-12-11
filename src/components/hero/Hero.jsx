@@ -35,7 +35,7 @@ const Hero = () => {
       <div className="grid md:grid-cols-2 max-w-[1920px] m-auto drop-shadow-xl">
         
         {/* Start Hero Title */}
-        <div className='flex flex-col justify-center md:items-start w-full h-full m-a px-2 py-8' data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+        <div className='flex flex-col justify-center md:items-start w-full h-full px-2 py-8' data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
           <h1 className='mt-32  sm:mt-[30px] font-Space-Grotesk font-black text-[30px] text-center sm:text-left sm:text-[50px] mr-0 md:mr-3 lg:mr-4 xl:mr-8 2xl:mr-10'>
             Make the Future Brighter with Sunshare!
           </h1>
