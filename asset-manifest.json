@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c6df004b.css",
-    "main.js": "/static/js/main.721a90a4.js",
+    "main.js": "/static/js/main.d70a0ed7.js",
     "static/media/sunshareToken.svg": "/static/media/sunshareToken.1bf7f482ab0da8c1ca6826ac9e605383.svg",
     "static/media/marketplace.svg": "/static/media/marketplace.447e8e041f603ebc20e80427a242a0db.svg",
     "static/media/bw-sunshare.svg": "/static/media/bw-sunshare.791da2ed3196d661ceca987f9c598109.svg",
@@ -25,10 +25,10 @@
     "index.html": "/index.html",
     "static/media/ethereum.svg": "/static/media/ethereum.9f3bd21910d826ce8bb3.svg",
     "main.c6df004b.css.map": "/static/css/main.c6df004b.css.map",
-    "main.721a90a4.js.map": "/static/js/main.721a90a4.js.map"
+    "main.d70a0ed7.js.map": "/static/js/main.d70a0ed7.js.map"
   },
   "entrypoints": [
     "static/css/main.c6df004b.css",
-    "static/js/main.721a90a4.js"
+    "static/js/main.d70a0ed7.js"
   ]
 }
