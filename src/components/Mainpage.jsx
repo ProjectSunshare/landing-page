@@ -5,7 +5,7 @@ import Navpage from './navbar/Navpage'
 const Mainpage = () => {
   return (
     <React.Fragment>
-      <section>
+      <section className="overflow-x-hidden">
         <div className='h-[100px] w-full'>
           <Navbar />
         </div>
