@@ -1,10 +1,10 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Home from '../../pages/Home'
-import About from '../../pages/About'
-import Blog from '../../pages/Blog'
-import Support from '../../pages/Support'
-import NotFound from '../../pages/NotFound'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "../../pages/Home";
+import About from "../../pages/About";
+import Blog from "../../pages/Blog";
+import Support from "../../pages/Support";
+import NotFound from "../../pages/NotFound";
 
 const Navpage = () => {
   return (
@@ -22,7 +22,7 @@ const Navpage = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default Navpage
+export default Navpage;
