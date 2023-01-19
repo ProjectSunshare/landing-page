@@ -1,6 +1,5 @@
 import React from 'react'
 import BlogCard from '../components/blog/BlogCard';
-import avatar from "../assets/img/blog/avatar.png";
 import { dummyBlogs } from '../customModules/dummyBlogs';
 const Blog = () => {
 	return (
