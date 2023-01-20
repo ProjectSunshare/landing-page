@@ -1,22 +1,22 @@
 import React from "react";
 
-const BlogCard = ({
+const ImportantBlogCard = ({
   profileImageUrl,
   blogImageUrl,
   blogTextContent,
   blogDate,
 }) => {
   return (
-    <div className="blog-container mx-auto ">
+    <div className="blog-container mx-auto w-94 h-96">
       <div className="blog-content relative">
-        <div className="bg-img bg-[#FEA803] w-80 p-5 rounded-t-lg 2xl:w-96 h-64">
+        <div className="bg-img bg-[#FEA803] w-full p-5 rounded-t-lg 2xl:w-96 h-64">
           <img
             src={blogImageUrl}
             alt=""
-            className="mx-auto overflow-hidden object-fill h-52"
+            className="mx-auto overflow-hidden object-fill h-full w-10/12"
           />
         </div>
-        <div className="blog-header bg-[#D9D9D9] w-80 py-5 pl-28 border-[#FFFFFF] border-t-4 rounded-b-lg pr-12 2xl:w-96 relative">
+        <div className="blog-header bg-[#D9D9D9] w-full h-28 py-5 pl-28 border-[#FFFFFF] border-t-4 rounded-b-lg pr-12 2xl:w-96 relative">
           <div className="avatar absolute -top-7 left-2">
             <img
               src={profileImageUrl}
@@ -32,4 +32,4 @@ const BlogCard = ({
   );
 };
 
-export default BlogCard;
+export default ImportantBlogCard;

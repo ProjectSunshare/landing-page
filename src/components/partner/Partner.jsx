@@ -14,7 +14,7 @@ const Partner = () => {
       setValue(count);
       slideRef.current.classList.add("fade-anim");
     } catch (error) {
-      console.log("Error On Partner", error)
+      console.log("Error On Partner", error);
     }
   };
 
@@ -23,7 +23,6 @@ const Partner = () => {
     setValue(count);
     slideRef.current.classList.add("fade-anim");
   };
-
 
   const removeAnimation = () => {
     slideRef.current.classList.remove("fade-anim");
@@ -35,24 +34,22 @@ const Partner = () => {
     if (effectRef.current === false) {
       const startSlider = () => {
         const slideInterval = setInterval(() => {
-          if(slideRef.current){handleOnNextClick()}else{
-            clearInterval(slideInterval)
+          if (slideRef.current) {
+            handleOnNextClick();
+          } else {
+            clearInterval(slideInterval);
           }
         }, 5000);
       };
-
-      if(slideRef.current){
-        console.log("wtff")
+      if (slideRef.current) {
         startSlider();
       }
-
       slideRef.current.addEventListener("animationend", removeAnimation);
-
       return () => {
         effectRef.current = true;
       };
     }
-  },[]);
+  }, []);
 
   return (
     <div className="text-white px-5 lg:px-32 xl:px-40 2xl:px-52">
@@ -72,8 +69,7 @@ const Partner = () => {
       {/* start partners */}
       <div
         ref={slideRef}
-        className="content-container grid md:divide-x md:divide-[#6E6E6E] md:grid-cols-2"
-      >
+        className="content-container grid md:divide-x md:divide-[#6E6E6E] md:grid-cols-2">
         <div className="partner-img w-full">
           <img
             className="m-auto h-[210px]"
@@ -95,15 +91,13 @@ const Partner = () => {
       <div className="flex justify-end pb-20 my-10">
         <button
           className="w-10 h-10 border rounded-full bg-white mx-2 drop-shadow-xl transition-all hover:bg-[#e6e6e6]"
-          onClick={handleOnPrevClick}
-        >
+          onClick={handleOnPrevClick}>
           <ChevronLeftIcon className="w-full h-full text-[#0D527C]" />
         </button>
 
         <button
           className="w-10 h-10 border rounded-full bg-white ml-3 drop-shadow-xl transition-all hover:bg-[#e6e6e6]"
-          onClick={handleOnNextClick}
-        >
+          onClick={handleOnNextClick}>
           <ChevronRightIcon className="w-full h-full text-[#0D527C]" />
         </button>
       </div>
