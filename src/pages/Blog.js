@@ -30,7 +30,7 @@ const Blog = () => {
             );
           })}
         </div>
-        <div className="xl:grid xl:grid-cols-3  flex gap-1 flex-wrap mr-10 ml-10">
+        <div className="xl:grid xl:grid-cols-3  flex gap-5 flex-wrap mr-10 ml-10 ">
           {dummyBlogs.slice(2, dummyBlogs.length - 1).map((blog) => {
             return (
               <BlogCard

@@ -20,7 +20,7 @@ const ImportantBlogCard = ({
           <div className="avatar absolute -top-[5vh] left-2">
             <img
               src={profileImageUrl}
-              className="rounded-full border-8 border-[#D9D9D9] bottom-[70px] w-[6vw] h-[6vw]"
+              className="rounded-full border-8 border-[#D9D9D9] bottom-[70px] w-full h-20 2xl:w-[6vw] 2xl:h-[6vw]"
               alt="User"
             />
           </div>
