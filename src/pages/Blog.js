@@ -1,20 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import BlogCard from "../components/blog/BlogCard";
 import { dummyBlogs } from "../customModules/dummyBlogs";
 import ImportantBlogCard from "../components/blog/ImportantBlogCard";
+
 const Blog = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const handleWindowChange = () => {
-    setWindowWidth(window.innerWidth);
-  };
+  const [isMobileSize, setIsMobileSize] = useState(
+    window.innerWidth > 900 ? false : true
+  );
 
   useEffect(() => {
-    window.addEventListener("resize", handleWindowChange);
-    return () => {
-      window.removeEventListener("resize", handleWindowChange);
+    const handleResize = () => {
+      if (window.innerWidth > 900) {
+        setIsMobileSize(false);
+      } else {
+        setIsMobileSize(true);
+      }
     };
-  });
+    window.addEventListener("resize", handleResize);
 
+    return () =>
+      window.removeEventListener("resize", () => {
+        handleResize();
+      });
+  }, []);
+
+  useEffect(() => {
+    console.log(isMobileSize);
+  }, [isMobileSize]);
   return (
     <div className="w-full my-36">
       <div className="small-title text-center">
@@ -27,11 +39,9 @@ const Blog = () => {
       <div className="large-title pb-20">
         <h2>Thought Starters</h2>
       </div>
-      <div className="important-blogs grid row-gap-8 sm:row-gap-0 sm:grid-cols-2 lg:grid-cols-3 max-w-[1920px] m-auto gap-y-10"></div>
       <div className="flex gap-1 flex-wrap">
         {dummyBlogs.slice(0, 2).map((blog) => {
-          console.log(windowWidth);
-          if (windowWidth > 768) {
+          if (!isMobileSize) {
             return (
               <ImportantBlogCard
                 key={blog.id}
@@ -42,6 +52,7 @@ const Blog = () => {
               />
             );
           }
+
           return (
             <BlogCard
               key={blog.id}
