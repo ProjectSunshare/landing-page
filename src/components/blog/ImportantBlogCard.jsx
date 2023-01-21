@@ -7,16 +7,16 @@ const ImportantBlogCard = ({
   blogDate,
 }) => {
   return (
-    <div className="blog-container mx-auto w-5/12 h-full">
+    <div className="blog-container h-[80vh] xl:mx-auto w-full xl:h-[60vh]">
       <div className="blog-content relative">
-        <div className="bg-img bg-[#fe0303] w-full p-5 rounded-t-lg 2xl:w-96 h-64">
+        <div className="bg-img bg-[#FEA803] h-[60vh] w-full p-5 rounded-t-lg xl:h-[35vh] overflow-hidden">
           <img
             src={blogImageUrl}
             alt=""
-            className="mx-auto overflow-hidden object-fill h-full w-10/12"
+            className="mx-auto object-cover w-full h-full "
           />
         </div>
-        <div className="blog-header bg-[#D9D9D9] w-full py-5 h-36 pl-28 border-[#FFFFFF] border-t-4 rounded-b-lg pr-12 2xl:w-96 relative ">
+        <div className="blog-header bg-[#D9D9D9] w:80 xl:w-full h-[20vh] py-5 xl:h-[15vh] pl-28 border-[#FFFFFF] border-t-4 rounded-b-lg pr-12 relative ">
           <div className="avatar absolute -top-7 left-2">
             <img
               src={profileImageUrl}

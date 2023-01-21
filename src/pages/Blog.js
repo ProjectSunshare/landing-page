@@ -4,29 +4,6 @@ import { dummyBlogs } from "../customModules/dummyBlogs";
 import ImportantBlogCard from "../components/blog/ImportantBlogCard";
 
 const Blog = () => {
-  const [isMobileSize, setIsMobileSize] = useState(
-    window.innerWidth > 900 ? false : true
-  );
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 900) {
-        setIsMobileSize(false);
-      } else {
-        setIsMobileSize(true);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-
-    return () =>
-      window.removeEventListener("resize", () => {
-        handleResize();
-      });
-  }, []);
-
-  useEffect(() => {
-    console.log(isMobileSize);
-  }, [isMobileSize]);
   return (
     <div className="w-full my-36">
       <div className="small-title text-center">
@@ -39,9 +16,9 @@ const Blog = () => {
       <div className="large-title pb-20">
         <h2>Thought Starters</h2>
       </div>
-      <div className="flex gap-1 flex-wrap">
-        {dummyBlogs.slice(0, 2).map((blog) => {
-          if (!isMobileSize) {
+      <div>
+        <div className="xl:grid xl:grid-cols-2 flex flex-wrap mr-10 ml-10 gap-5">
+          {dummyBlogs.slice(0, 2).map((blog) => {
             return (
               <ImportantBlogCard
                 key={blog.id}
@@ -51,30 +28,21 @@ const Blog = () => {
                 blogDate={blog.blogDate}
               />
             );
-          }
-
-          return (
-            <BlogCard
-              key={blog.id}
-              profileImageUrl={blog.profileImageUrl}
-              blogImageUrl={blog.blogImageUrl}
-              blogTextContent={blog.blogTextContent}
-              blogDate={blog.blogDate}
-            />
-          );
-        })}
-
-        {dummyBlogs.slice(2, dummyBlogs.length - 1).map((blog) => {
-          return (
-            <BlogCard
-              key={blog.id}
-              profileImageUrl={blog.profileImageUrl}
-              blogImageUrl={blog.blogImageUrl}
-              blogTextContent={blog.blogTextContent}
-              blogDate={blog.blogDate}
-            />
-          );
-        })}
+          })}
+        </div>
+        <div className="flex gap-1 flex-wrap">
+          {dummyBlogs.slice(2, dummyBlogs.length - 1).map((blog) => {
+            return (
+              <BlogCard
+                key={blog.id}
+                profileImageUrl={blog.profileImageUrl}
+                blogImageUrl={blog.blogImageUrl}
+                blogTextContent={blog.blogTextContent}
+                blogDate={blog.blogDate}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const BlogCard = ({
   blogDate,
 }) => {
   return (
-    <div className="blog-container mx-auto ">
+    <div className="blog-container mx-auto">
       <div className="blog-content relative">
         <div className="bg-img bg-[#FEA803] w-80 p-5 rounded-t-lg 2xl:w-96 h-64">
           <img
