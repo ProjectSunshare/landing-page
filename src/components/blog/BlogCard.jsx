@@ -7,25 +7,25 @@ const BlogCard = ({
   blogDate,
 }) => {
   return (
-    <div className="blog-container mx-auto">
+    <div className="blog-container mx-auto w-full">
       <div className="blog-content relative">
-        <div className="bg-img bg-[#FEA803] w-80 p-5 rounded-t-lg 2xl:w-96 h-64">
+        <div className="bg-img bg-[#FEA803] h-[60vh] w-full p-5 rounded-t-lg xl:h-[30vh]">
           <img
             src={blogImageUrl}
             alt=""
-            className="mx-auto overflow-hidden object-fill h-52"
+            className="mx-auto object-cover w-full h-full"
           />
         </div>
-        <div className="blog-header bg-[#D9D9D9] w-80 py-5 pl-28 border-[#FFFFFF] border-t-4 rounded-b-lg pr-12 2xl:w-96 relative">
+        <div className="blog-header bg-[#D9D9D9] h-[20vh] py-5 pl-28 border-[#FFFFFF] border-t-4 rounded-b-lg pr-12 w-full relative">
           <div className="avatar absolute -top-7 left-2">
             <img
               src={profileImageUrl}
-              className="rounded-full border-8 border-[#D9D9D9] bottom-[70px] w-20 h-20"
+              className="rounded-full border-8 border-[#D9D9D9] bottom-[70px] w-full h-20"
               alt="User"
             />
           </div>
-          <h3 className="text-xl">{blogTextContent}</h3>
-          <p className="text-xs">{blogDate}</p>
+          <h3 className="text-[2.4vh]">{blogTextContent}</h3>
+          <p className="text-[2vh]">{blogDate}</p>
         </div>
       </div>
     </div>
