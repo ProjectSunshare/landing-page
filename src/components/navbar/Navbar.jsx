@@ -10,9 +10,10 @@ import { MenuItems } from "./MenuItems";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Navbar = () => {
+const Navbar = ({ setToDark }) => {
   useEffect(() => {
     AOS.init();
+    //setToDark();
   });
 
   // if the navlink is active or not, give this style
@@ -36,16 +37,17 @@ const Navbar = () => {
 
   //handle click outside
   const handleClickOutside = (e) => {
-    if (!menuRef.current.contains(e.target)) {
-      setNav(false);
+    if (menuRef.current !== null) {
+      if (!menuRef.current.contains(e.target)) {
+        setNav(false);
+      }
     }
   };
 
   return (
     <div
       className="w-screen h-[100px] z-10 bg-slate-50 fixed drop-shadow-lg"
-      data-aos="fade-down"
-    >
+      data-aos="fade-down">
       {/* start normal navbar */}
       <div className="container mx-auto px-2 flex justify-between items-center w-full h-full">
         <div className="flex items-center">
@@ -65,8 +67,7 @@ const Navbar = () => {
                   to={item.url}
                   className={({ isActive }) =>
                     isActive ? activeLink : normalLink
-                  }
-                >
+                  }>
                   {item.title}
                 </NavLink>
               );
@@ -84,18 +85,15 @@ const Navbar = () => {
                 <button
                   type="submit"
                   id="searchsubmit"
-                  className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-                >
+                  className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg
                     className="h-5 w-5 text-gray-400"
                     fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
+                    viewBox="0 0 20 20">
                     <path
                       fillRule="evenodd"
                       d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                      clipRule="evenodd"
-                    ></path>
+                      clipRule="evenodd"></path>
                   </svg>
                 </button>
                 <input
@@ -108,15 +106,17 @@ const Navbar = () => {
               </form>
             </div>
           </div>
-
           <div className="my-auto">
-            <button className="mx-2">
+            <button
+              className="mx-2"
+              onClick={() => {
+                setToDark();
+              }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="w-6 h-6"
-              >
+                className="w-6 h-6">
                 <path
                   fillRule="evenodd"
                   d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
@@ -125,7 +125,6 @@ const Navbar = () => {
               </svg>
             </button>
           </div>
-
           <button
             className="px-6 py-2
                            bg-[#FEA803]
@@ -134,16 +133,14 @@ const Navbar = () => {
                            transition-all
                            hover:bg-[#F7931E]
                            rounded-lg
-                           "
-          >
+                           ">
             Launch App
           </button>
         </div>
 
         <div
           className="md:hidden bg-[#FEA803] border-2 border-black rounded-md"
-          onClick={handleClick}
-        >
+          onClick={handleClick}>
           {!nav ? (
             <Bars3Icon className="w-8" />
           ) : (
@@ -159,16 +156,14 @@ const Navbar = () => {
           !nav ? "hidden" : "Absolute bg-slate-50 w-full px-8 md:hidden"
         }
         ref={menuRef}
-        data-aos="fade-down"
-      >
+        data-aos="fade-down">
         {MenuItems.map((item) => {
           return (
             <NavLink
               key={item.id}
               to={item.url}
               onClick={handleClose}
-              className="flex p-5 py-2 border-b-2 border-zinc-300 w-full hover:bg-zinc-300 hover:rounded-md hover:border-[#d9d9d9]"
-            >
+              className="flex p-5 py-2 border-b-2 border-zinc-300 w-full hover:bg-zinc-300 hover:rounded-md hover:border-[#d9d9d9]">
               {item.title}
             </NavLink>
           );
@@ -183,18 +178,15 @@ const Navbar = () => {
               <button
                 type="submit"
                 id="searchsubmit"
-                className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
-              >
+                className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <svg
                   className="h-5 w-5 text-gray-400"
                   fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
+                  viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
                     d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    clipRule="evenodd"
-                  ></path>
+                    clipRule="evenodd"></path>
                 </svg>
               </button>
               <input
@@ -206,13 +198,18 @@ const Navbar = () => {
               />
             </form>
           </div>
-          <button className="mx-2">
+
+          <button
+            id="darkMode"
+            className="mx-2"
+            onClick={() => {
+              console.log("???");
+            }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-6 h-6"
-            >
+              className="w-6 h-6">
               <path
                 fillRule="evenodd"
                 d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
@@ -230,8 +227,7 @@ const Navbar = () => {
                           border-2 border-black
                           hover:bg-[#F7931E] hover:text-white
                           rounded-lg
-                          "
-          >
+                          ">
             Launch App
           </button>
         </div>
