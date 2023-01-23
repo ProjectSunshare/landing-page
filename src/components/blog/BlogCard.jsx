@@ -9,7 +9,7 @@ const BlogCard = ({
   return (
     <div className="blog-container mx-auto w-full">
       <div className="blog-content relative">
-        <div className="bg-img bg-[#FEA803] h-[60vh] w-full p-5 rounded-t-lg xl:h-[30vh]">
+        <div className="bg-img dark:bg-slate-900 bg-[#FEA803] h-[60vh] w-full p-5 rounded-t-lg xl:h-[30vh]">
           <img
             src={blogImageUrl}
             alt=""

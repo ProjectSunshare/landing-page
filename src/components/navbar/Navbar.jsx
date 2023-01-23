@@ -46,7 +46,7 @@ const Navbar = ({ setToDark }) => {
 
   return (
     <div
-      className="w-screen h-[100px] z-10 bg-slate-50 fixed drop-shadow-lg"
+      className="w-screen h-[100px] z-10 dark:bg-black bg-slate-50 fixed drop-shadow-lg"
       data-aos="fade-down">
       {/* start normal navbar */}
       <div className="container mx-auto px-2 flex justify-between items-center w-full h-full">
@@ -106,6 +106,7 @@ const Navbar = ({ setToDark }) => {
               </form>
             </div>
           </div>
+          {/* Darkmode button */}
           <div className="my-auto">
             <button
               className="mx-2"

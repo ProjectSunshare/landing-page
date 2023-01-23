@@ -3,7 +3,6 @@ import Navbar from "./navbar/Navbar";
 import Navpage from "./navbar/Navpage";
 
 const Mainpage = ({ setToDark }) => {
-  //console.log(setDarkTheme);
   return (
     <React.Fragment>
       <section className="overflow-x-hidden">
