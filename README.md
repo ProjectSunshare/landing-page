@@ -1,8 +1,44 @@
+![My Image](../landing-page/src/assets/img/logo/logo.png)
+# <font color="#FFD700	"> SUNSHARE </font>
+
+*​A renewable energy blockchain marketplace application for a clean community.* 
+
+<br/>
+
+## Table of Contents
+
+* [Installation](#installation)
+    - [Node.js and NPM](#nodejs-and-npm)
+    - [NVM](#nvm)
+*  [Getting Started with Create React App](#getting-started-with-create-react-app)
+* [Available Scripts](#available-scripts)
+    - [Formatting](#formatting)
+    - [Deployment](#deployment)
+* [Learn More](#learn-more)
+
+<br/>
+
+
+# Installation
+
+* ## Node.js and NPM
+You can download Node.js [here](https://nodejs.org/en/download/). There are various instructions for downloading Node.js for different instances.
+
+Additional [resource](https://phoenixnap.com/kb/install-node-js-npm-on-windows).
+
+* ## NVM
+For installing nvm you can follow instructions [here](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/).
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+Before you can run the project, make sure that you have installed the following:
+
+ 1. Node.js
+ 2. Yarn
 
 In the project directory, you can run:
 
@@ -13,6 +49,22 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+* If ever this error message appeared when you tried to *yarn  start* our project : **(react-scripts: not found
+error Command failed with exit code 127)** follow these step:
+
+    * *The dependencies might not be installed. To install them use:*
+
+        ```
+        npm install
+        ```
+    Try to *yarn start* again the project to see if it runs.
+
+    If for instances it still doesn't work, try to follow the different instructions again given on the [Installation](#installation) section.
+
+
+
+
 
 ### `yarn test`
 
@@ -38,6 +90,20 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Formatting
+
+Checks the formatting of code and reports any broken rules of *"Prettier"*.
+
+```
+npx prettier --check
+```
+
+Checks and fixes the formatting of the code.
+```
+yarn prettier --write 
+```
+
 
 ## Deployment
 
