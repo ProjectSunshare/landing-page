@@ -1,4 +1,4 @@
-![My Image](../landing-page/src/assets/img/logo/logo.png)
+
 # <font color="#FFD700	"> SUNSHARE </font>
 
 *​A renewable energy blockchain marketplace application for a clean community.* 
