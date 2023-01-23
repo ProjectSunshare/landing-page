@@ -16,7 +16,7 @@ const ImportantBlogCard = ({
             className="mx-auto object-cover w-full h-full "
           />
         </div>
-        <div className="blog-header bg-[#D9D9D9] w:80 xl:w-full h-[20vh] pl-[7vw] pr-12 xl:h-[15vh] border-[#FFFFFF] border-t-4 rounded-b-lg  relative ">
+        <div className="blog-header bg-[#D9D9D9] w:80 xl:w-full h-[20vh] pl-28 xl:pl-[7vw] pr-12 xl:h-[15vh] border-[#FFFFFF] border-t-4 rounded-b-lg relative ">
           <div className="avatar absolute -top-[5vh] left-2">
             <img
               src={profileImageUrl}
