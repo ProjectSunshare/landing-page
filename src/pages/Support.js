@@ -4,9 +4,6 @@ import SupportSect from "../components/opening/SupportSect";
 import Faq from "../components/faq/Faq";
 import GreyArea from "../components/divider/GreyArea";
 import Newsletter from "../components/newsletter/Newsletter";
-import Footer from "../components/footer/Footer";
-import FooterBLK from "../components/footer/FooterBLK";
-
 const Support = () => {
   return (
     <React.Fragment>
@@ -35,16 +32,6 @@ const Support = () => {
       <div className="w-full text-center dark:bg-[#0d1f31] dark:text-white">
         <div className="container m-auto">
           <Newsletter />
-        </div>
-      </div>
-      <div className="w-full bg-[#161616] text-white ">
-        <div className="container m-auto">
-          <Footer />
-        </div>
-      </div>
-      <div className="w-full bg-[#000] ">
-        <div className="container m-auto">
-          <FooterBLK />
         </div>
       </div>
     </React.Fragment>

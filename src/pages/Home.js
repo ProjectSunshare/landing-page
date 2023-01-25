@@ -10,8 +10,6 @@ import Blog from "../components/blog/Blog";
 import Divider1 from "../components/divider/Divider1";
 import GreyArea from "../components/divider/GreyArea";
 import Newsletter from "../components/newsletter/Newsletter";
-import Footer from "../components/footer/Footer";
-import FooterBLK from "../components/footer/FooterBLK";
 
 const Home = () => {
   return (
@@ -52,7 +50,7 @@ const Home = () => {
       </div>
 
       <div className="w-full dark:bg-[#0d1f31] dark:text-white">
-        <div className="container m-auto"> 
+        <div className="container m-auto">
           <Blog />
         </div>
       </div>
@@ -65,18 +63,6 @@ const Home = () => {
       <div className="w-full bg-white text-black text-center dark:bg-[#243447] dark:text-white">
         <div className="container m-auto">
           <Newsletter />
-        </div>
-      </div>
-
-      <div className="w-full bg-[#161616] text-white">
-        <div className="container m-auto">
-          <Footer />
-        </div>
-      </div>
-
-      <div className="w-full bg-[#000]">
-        <div className="container m-auto">
-          <FooterBLK />
         </div>
       </div>
     </React.Fragment>
