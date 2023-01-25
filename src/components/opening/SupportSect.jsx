@@ -2,7 +2,7 @@ import React from "react";
 
 const SupportSect = () => {
   return (
-    <div className="mx-14 md:mx-32 lg:my-20">
+    <div className="mx-14 md:mx-32 lg:py-20 ">
       <h2 className="mt-32  sm:mt-[30px] font-Space-Grotesk font-black text-[30px] text-center sm:text-[50px]">
         We'd love to hear from you
       </h2>

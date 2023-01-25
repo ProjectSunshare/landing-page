@@ -10,39 +10,39 @@ import FooterBLK from "../components/footer/FooterBLK";
 const Support = () => {
   return (
     <React.Fragment>
-      <div className="w-full">
+      <div className="w-full dark:bg-[#0d1f31] dark:text-white">
         <div className="container m-auto">
           <SupportSect />
         </div>
       </div>
 
-      <div className="w-full bg-[#E8E6E6]">
+      <div className="w-full bg-[#E8E6E6] dark:bg-[#0d1f31] dark:text-white">
         <div className="container m-auto">
           <Contact />
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full dark:bg-[#0d1f31] dark:text-white">
         <div className="container m-auto">
           <Faq />
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full dark:bg-[#0d1f31] dark:text-white">
         <GreyArea />
       </div>
 
-      <div className="w-full text-center">
+      <div className="w-full text-center dark:bg-[#0d1f31] dark:text-white">
         <div className="container m-auto">
           <Newsletter />
         </div>
       </div>
-      <div className="w-full bg-[#161616] text-white">
+      <div className="w-full bg-[#161616] text-white ">
         <div className="container m-auto">
           <Footer />
         </div>
       </div>
-      <div className="w-full bg-[#000]">
+      <div className="w-full bg-[#000] ">
         <div className="container m-auto">
           <FooterBLK />
         </div>

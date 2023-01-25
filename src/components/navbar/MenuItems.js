@@ -5,7 +5,7 @@ export const MenuItems = [
     url: "/",
     // replace this line of code (↓) with this (↑) if deployed with own domain
     // url: '/landing-page',
-    cName: "px-6 py-2",
+    cName: "px-6 py-2 dark:text-white",
   },
   {
     id: "2",

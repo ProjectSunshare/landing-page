@@ -18,9 +18,9 @@ const Navbar = ({ setToDark }) => {
 
   // if the navlink is active or not, give this style
   const activeLink =
-    "px-8 py-2 m-1 mr-2 bg-[#FEA803] text-white rounded-full transition-all ";
+    "px-8 py-2 m-1 mr-2 bg-[#FEA803] text-white rounded-full transition-all";
   const normalLink =
-    "px-8 py-2 m-1 mr-2 text-black bg-transparent hover:transition-all ease-in-out delay-100 duration-500 hover:bg-[#E8E6E6] hover:text-black rounded-full";
+    "px-8 py-2 m-1 mr-2 text-black bg-transparent hover:transition-all ease-in-out delay-100 duration-500 hover:bg-[#0D1F31] hover:text-black rounded-full dark:text-white";
 
   // handle menu button click
   const [nav, setNav] = useState(false);
@@ -46,7 +46,7 @@ const Navbar = ({ setToDark }) => {
 
   return (
     <div
-      className="w-screen h-[100px] z-10 dark:bg-black bg-slate-50 fixed drop-shadow-lg"
+      className="w-screen h-[100px] z-10 dark:bg-[#243447] bg-slate-50 fixed drop-shadow-lg"
       data-aos="fade-down">
       {/* start normal navbar */}
       <div className="container mx-auto px-2 flex justify-between items-center w-full h-full">

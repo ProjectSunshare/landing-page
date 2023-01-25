@@ -10,15 +10,15 @@ const Newsletter = () => {
 
   return (
     <div
-      className="py-36"
+      className="py-36 "
       data-aos="fade-down"
       data-aos-delay="250"
       data-aos-duration="1000"
     >
       <form action="">
-        <div className="newsletter-input mb-5">
+        <div className="newsletter-input mb-5 ">
           <input
-            className="inline md:w-96 border-2 border-[#D9D9D9] py-4 px-2 sm:px-5 bg-[#D9D9D9] sm:rounded-l-lg"
+            className="inline md:w-96 border-2 border-[#D9D9D9] py-4 px-2 sm:px-5 bg-[#D9D9D9] sm:rounded-l-lg "
             type="email"
             name=""
             id=""

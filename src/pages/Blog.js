@@ -5,7 +5,7 @@ import ImportantBlogCard from "../components/blog/ImportantBlogCard";
 
 const Blog = () => {
   return (
-    <div className="w-full my-36">
+    <div className="w-full py-36 dark:bg-[#0D1F31] dark:text-white">
       <div className="small-title text-center">
         <div className="small-title-container">
           <div className="left-dash text-[#FEA803] px-10 pt-1 inline">-</div>

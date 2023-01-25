@@ -88,7 +88,7 @@ const Partner = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-end pb-20 my-10">
+      <div className="flex justify-end pb-20 py-10">
         <button
           className="w-10 h-10 border rounded-full bg-white mx-2 drop-shadow-xl transition-all hover:bg-[#e6e6e6]"
           onClick={handleOnPrevClick}>

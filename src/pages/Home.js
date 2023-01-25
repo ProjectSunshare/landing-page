@@ -16,20 +16,20 @@ import FooterBLK from "../components/footer/FooterBLK";
 const Home = () => {
   return (
     <React.Fragment>
-      <div className="w-full bg-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+      <div className="w-full bg-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)] dark:bg-[#0D1F31] dark:text-white">
         <div className="container m-auto">
           <Hero />
         </div>
       </div>
 
-      <div className="w-full h-full bg-[#F7931E]">
+      <div className="w-full h-full bg-[#F7931E] dark:bg-[#243447]">
         <div className="container m-auto">
           <Maindata />
           <Graph />
         </div>
       </div>
 
-      <div className="w-full bg-white text-black text-center drop-shadow-[0_-4px_4px_rgba(0,0,0,0.25)]">
+      <div className="w-full bg-white text-black text-center drop-shadow-[0_-4px_4px_rgba(0,0,0,0.25)] dark:bg-[#0D1F31] dark:text-white">
         <div className="container m-auto">
           <Offered />
         </div>
@@ -39,20 +39,20 @@ const Home = () => {
         <Divider1 />
       </div>
 
-      <div className="w-full bg-white text-black text-center">
+      <div className="w-full bg-white text-black text-center dark:bg-[#0D1F31] dark:text-white">
         <div className="container m-auto">
           <Token />
         </div>
       </div>
 
-      <div className="w-full bg-[#0D527C]">
+      <div className="w-full bg-[#0D527C] dark:bg-[#02314D]">
         <div className="container m-auto">
           <Partner />
         </div>
       </div>
 
-      <div className="w-full">
-        <div className="container m-auto">
+      <div className="w-full dark:bg-[#0d1f31] dark:text-white">
+        <div className="container m-auto"> 
           <Blog />
         </div>
       </div>
@@ -62,7 +62,7 @@ const Home = () => {
         <GreyArea />
       </div>
 
-      <div className="w-full bg-white text-black text-center">
+      <div className="w-full bg-white text-black text-center dark:bg-[#243447] dark:text-white">
         <div className="container m-auto">
           <Newsletter />
         </div>
