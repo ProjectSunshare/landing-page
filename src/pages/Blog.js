@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import BlogCard from "../components/blog/BlogCard";
 import { dummyBlogs } from "../customModules/dummyBlogs";
 import ImportantBlogCard from "../components/blog/ImportantBlogCard";

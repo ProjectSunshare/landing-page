@@ -34,8 +34,7 @@ const Footer = () => {
                     to={item.url}
                     className={({ isActive }) =>
                       isActive ? activeLink : normalLink
-                    }
-                  >
+                    }>
                     {item.title}
                   </NavLink>
                 );
