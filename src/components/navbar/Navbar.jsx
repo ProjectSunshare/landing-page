@@ -20,7 +20,7 @@ const Navbar = ({ setToDark }) => {
   const activeLink =
     "px-8 py-2 m-1 mr-2 bg-[#FEA803] text-white rounded-full transition-all";
   const normalLink =
-    "px-8 py-2 m-1 mr-2 text-black bg-transparent hover:transition-all ease-in-out delay-100 duration-500 hover:bg-[#0D1F31] hover:text-black rounded-full dark:text-white";
+    "px-8 py-2 m-1 mr-2 text-black bg-transparent hover:transition-all ease-in-out delay-100 duration-500 hover:bg-[#E8e6e6] hover:text-black rounded-full dark:text-white dark:md:hover:bg-[#0d1f31]";
 
   // handle menu button click
   const [nav, setNav] = useState(false);
