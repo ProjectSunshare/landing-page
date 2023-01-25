@@ -1,5 +1,6 @@
 {
-    "files.associations": {
-        "*.jsx": "javascriptreact"
-    }
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  "prettier.bracketSameLine": true
 }

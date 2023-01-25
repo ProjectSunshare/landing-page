@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 
-import Mainpage from './components/Mainpage';
+import Mainpage from "./components/Mainpage";
 
 function App() {
+  const [isDark, setDarkTheme] = useState(false);
+
+  const setToDark = () => {
+    setDarkTheme(!isDark);
+  };
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDark]);
   return (
     <React.Fragment>
       <BrowserRouter>
-        <Mainpage />
+        <Mainpage setToDark={setToDark} />
       </BrowserRouter>
     </React.Fragment>
   );
