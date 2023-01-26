@@ -6,9 +6,11 @@ import proj_devt from "../../assets/img/about/coreteam/proj_devt.png";
 import project_engr from "../../assets/img/about/coreteam/project_engr.png";
 import React, { useState } from "react";
 import { useEffect } from "react";
+import OverheadButton from "./OverheadButton";
+import CoreInformation from "./CoreInformation";
 
 const AboutUs2 = () => {
-  const getPosition = (pxLocation, pyLocation) => {
+  const getPositionInImage = (pxLocation, pyLocation) => {
     const imgElem = document.querySelector("#sunshare_team_img");
     const cw = imgElem.clientWidth;
     const ch = imgElem.clientHeight;
@@ -17,9 +19,10 @@ const AboutUs2 = () => {
 
     const x = (pxLocation * cw) / iw;
     const y = (pyLocation * ch) / ih;
-    console.log("wutt", y);
-    console.log("lolol", x);
-    return [x, y];
+    //Viewport height unit (vh) = 100 * (Pixel Unit Size / Viewport height)
+    const vw = 100 * (x / window.innerWidth);
+    console.log(vw);
+    return [vw, y];
   };
 
   const [teamImagesPosition, setImagePosition] = useState({
@@ -30,19 +33,16 @@ const AboutUs2 = () => {
     fifthPosition: [0, 0],
   });
 
+  //
   useEffect(() => {
     setImagePosition({
-      firstPosition: [getPosition(3800, 970)],
-      secondPosition: getPosition(3154, 1017),
-      thirdPosition: getPosition(2520, 1130),
-      fourthPosition: getPosition(1796, 1029),
-      fifthPosition: getPosition(1100, 1029),
+      firstPosition: [getPositionInImage(3800, 970)],
+      secondPosition: getPositionInImage(3154, 1017),
+      thirdPosition: getPositionInImage(2520, 1130),
+      fourthPosition: getPositionInImage(1796, 1029),
+      fifthPosition: getPositionInImage(1100, 1029),
     });
   }, []);
-  useEffect(() => {
-    console.log("YABAI", teamImagesPosition.firstPosition[0]);
-    console.log("YABAI", teamImagesPosition.firstPosition[1]);
-  }, [teamImagesPosition]);
 
   const getNaturalHeightAndWidth = (event) => {
     const imgElem = document.querySelector("#sunshare_team_img");
@@ -58,9 +58,7 @@ const AboutUs2 = () => {
     const px = (x / cw) * iw;
     const py = (y / ch) * ih;
     const x2 = (px * cw) / iw;
-    console.log("x: " + x, "y: " + y);
-    console.log("px: " + px, "py: " + py);
-    console.log("x2: ", x2);
+
     return [px, py];
   };
 
@@ -140,7 +138,6 @@ const AboutUs2 = () => {
     setImage(picture);
     setPerson(initialPerson);
     getText();
-    console.log(initialPerson);
   }
 
   return (
@@ -165,174 +162,48 @@ const AboutUs2 = () => {
             alt="acquisition"
             onLoad={() => {
               setImagePosition({
-                firstPosition: getPosition(3800, 970),
-                secondPosition: getPosition(3154, 1017),
-                thirdPosition: getPosition(2520, 1130),
-                fourthPosition: getPosition(1796, 1029),
-                fifthPosition: getPosition(1100, 1029),
+                firstPosition: getPositionInImage(3800, 970),
+                secondPosition: getPositionInImage(3154, 1017),
+                thirdPosition: getPositionInImage(2520, 1130),
+                fourthPosition: getPositionInImage(1796, 1029),
+                fifthPosition: getPositionInImage(1100, 1029),
               });
             }}
           />
-          <div
-            style={{
-              position: "absolute",
-              left: `${teamImagesPosition.firstPosition[0]}px`,
-              top: `${teamImagesPosition.firstPosition[1]}px`,
-            }}>
-            <div className="">
-              <button
-                class="w-5 h-full items-center z-10"
-                onClick={() => handleChange(project_engr, "project_engr")}
-                alt="project_engr">
-                <svg
-                  id="proj_ece"
-                  className=" relative w-full h-full z-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="#FBE126">
-                  <path
-                    fillRule="evenodd"
-                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
 
-          <div
-            style={{
-              position: "absolute",
-              left: `${teamImagesPosition.secondPosition[0]}px`,
-              top: `${teamImagesPosition.secondPosition[1]}px`,
-            }}>
-            <div className="">
-              <button
-                class="w-5 h-full items-center z-10"
-                onClick={() => handleChange(programmer, "programmer")}
-                alt="programmer">
-                <svg
-                  id="programmer"
-                  className=" relative w-full h-full z-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="#FBE126">
-                  <path
-                    fillRule="evenodd"
-                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <OverheadButton
+            topPos={`${teamImagesPosition.firstPosition[0]}`}
+            leftPos={`${teamImagesPosition.firstPosition[1]}`}
+            handleChange={() => handleChange(project_engr, "project_engr")}
+          />
 
-          <div
-            style={{
-              position: "absolute",
-              left: `${teamImagesPosition.thirdPosition[0]}px`,
-              top: `${teamImagesPosition.thirdPosition[1]}px`,
-            }}>
-            <div className="">
-              <button
-                class="w-5 h-full items-center z-10"
-                onClick={() => handleChange(project_lead, "project_lead")}
-                alt="project_lead">
-                <svg
-                  id="proj_lead"
-                  className=" pb-[3rem] relative w-full h-full z-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="#FBE126">
-                  <path
-                    fillRule="evenodd"
-                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <OverheadButton
+            topPos={`${teamImagesPosition.secondPosition[0]}`}
+            leftPos={`${teamImagesPosition.secondPosition[1]}`}
+            handleChange={() => handleChange(programmer, "programmer")}
+          />
 
-          <div
-            style={{
-              position: "absolute",
-              left: `${teamImagesPosition.fourthPosition[0]}px`,
-              top: `${teamImagesPosition.fourthPosition[1]}px`,
-            }}>
-            <div className="absolute">
-              <button
-                id="test-idd"
-                class="w-5 h-full z-10"
-                onClick={() => handleChange(proj_devt, "proj_devt")}
-                alt="proj_devt">
-                <svg
-                  id="proj_dev_two"
-                  className=" pb-[5rem] w-full h-full z-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="#FBE126">
-                  <path
-                    fillRule="evenodd"
-                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <OverheadButton
+            topPos={`${teamImagesPosition.thirdPosition[0]}`}
+            leftPos={`${teamImagesPosition.thirdPosition[1]}`}
+            handleChange={() => handleChange(project_lead, "project_lead")}
+          />
 
-          <div
-            style={{
-              position: "absolute",
-              left: `${teamImagesPosition.fifthPosition[0]}px`,
-              top: `${teamImagesPosition.fifthPosition[1]}px`,
-            }}>
-            <div className="">
-              <button
-                class="w-5 h-full z-10"
-                onClick={() => handleChange(proj_devt_offr, "proj_devt_offr")}
-                alt="proj_devt_offr">
-                <svg
-                  id="proj_dev_one"
-                  className=" pb-[5.8rem] w-full h-full z-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="#FBE126">
-                  <path
-                    fillRule="evenodd"
-                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
+          <OverheadButton
+            topPos={`${teamImagesPosition.fourthPosition[0]}`}
+            leftPos={`${teamImagesPosition.fourthPosition[1]}`}
+            handleChange={() => handleChange(proj_devt, "proj_devt")}
+          />
 
-        <div className="w-full h-full absolute flex flex-row place-content-evenly z-10"></div>
-      </div>
-      <div className="bg-[#ffffff] mx-auto grid grid-cols-3 flex flex-col justify-items-center align-items-center">
-        <div className="scale-75 col-span-2 mx-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
-          <div className="w-full h-full">
-            <div className="rounded m-auto ">{<img src={image} alt="" />}</div>
-          </div>
-        </div>
-        <div className="pb-[20%] pt-[40%] w-full h-full">
-          <h1
-            className="font-Space-Grotesk font-black text-left xl:text-[50px]"
-            alt="">
-            {text.name}
-          </h1>
-          <h4
-            className="text-[#FEA803] font-Space-Grotesk font-black text-left xl:text-[30px]"
-            alt="">
-            {text.title}
-          </h4>
-          <h5 className="xl:text-[30px]">{text.contact}</h5>
-          <h5 className="xl:text-[30px]">{text.email}</h5>
+          <OverheadButton
+            topPos={`${teamImagesPosition.fifthPosition[0]}`}
+            leftPos={`${teamImagesPosition.fifthPosition[1]}`}
+            handleChange={() => handleChange(proj_devt_offr, "proj_devt_offr")}
+          />
         </div>
       </div>
+
+      <CoreInformation text={text} image={image} />
     </div>
   );
 };
