@@ -4,7 +4,7 @@ const OverheadButton = ({ topPos, leftPos, handleChange }) => {
       style={{
         position: "absolute",
         left: `${leftPos}vw`,
-        top: `${topPos}px`,
+        top: `${topPos}vh`,
       }}>
       <div className="">
         <button

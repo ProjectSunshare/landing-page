@@ -23,8 +23,9 @@ const AboutUs2 = () => {
     //Viewport width unit (vw) = 100 * (Pixel Unit Size / Viewport width)
     const vw = 100 * (x / window.innerWidth);
     const vy = 100 * (y / window.innerHeight);
-    console.log(vw, y);
-    return [vw, y];
+    console.log(`100 * ((${y} + ${window.scrollY})/ ${window.innerHeight})`);
+    console.log(vw, vy);
+    return [vw, vy];
   };
 
   const [teamImagesPosition, setImagePosition] = useState({
@@ -160,15 +161,15 @@ const AboutUs2 = () => {
           <img
             id="sunshare_team_img"
             src={sunshareteam}
-            className="w-[100vw] h-full"
+            className="w-[100vw] lg:h-[90vh] md:h-[70vh] h-[50vh]"
             alt="acquisition"
             onLoad={() => {
               setImagePosition({
-                firstPosition: getPositionInImage(3800, 970),
-                secondPosition: getPositionInImage(3154, 1017),
-                thirdPosition: getPositionInImage(2520, 1130),
-                fourthPosition: getPositionInImage(1796, 1029),
-                fifthPosition: getPositionInImage(1100, 1029),
+                firstPosition: getPositionInImage(3800, 870),
+                secondPosition: getPositionInImage(3154, 917),
+                thirdPosition: getPositionInImage(2520, 1030),
+                fourthPosition: getPositionInImage(1796, 929),
+                fifthPosition: getPositionInImage(1100, 929),
               });
             }}
           />
