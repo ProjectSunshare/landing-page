@@ -19,9 +19,11 @@ const AboutUs2 = () => {
 
     const x = (pxLocation * cw) / iw;
     const y = (pyLocation * ch) / ih;
-    //Viewport height unit (vh) = 100 * (Pixel Unit Size / Viewport height)
+
+    //Viewport width unit (vw) = 100 * (Pixel Unit Size / Viewport width)
     const vw = 100 * (x / window.innerWidth);
-    console.log(vw);
+    const vy = 100 * (y / window.innerHeight);
+    console.log(vw, y);
     return [vw, y];
   };
 
@@ -172,32 +174,32 @@ const AboutUs2 = () => {
           />
 
           <OverheadButton
-            topPos={`${teamImagesPosition.firstPosition[0]}`}
-            leftPos={`${teamImagesPosition.firstPosition[1]}`}
+            leftPos={`${teamImagesPosition.firstPosition[0]}`}
+            topPos={`${teamImagesPosition.firstPosition[1]}`}
             handleChange={() => handleChange(project_engr, "project_engr")}
           />
 
           <OverheadButton
-            topPos={`${teamImagesPosition.secondPosition[0]}`}
-            leftPos={`${teamImagesPosition.secondPosition[1]}`}
+            leftPos={`${teamImagesPosition.secondPosition[0]}`}
+            topPos={`${teamImagesPosition.secondPosition[1]}`}
             handleChange={() => handleChange(programmer, "programmer")}
           />
 
           <OverheadButton
-            topPos={`${teamImagesPosition.thirdPosition[0]}`}
-            leftPos={`${teamImagesPosition.thirdPosition[1]}`}
+            leftPos={`${teamImagesPosition.thirdPosition[0]}`}
+            topPos={`${teamImagesPosition.thirdPosition[1]}`}
             handleChange={() => handleChange(project_lead, "project_lead")}
           />
 
           <OverheadButton
-            topPos={`${teamImagesPosition.fourthPosition[0]}`}
-            leftPos={`${teamImagesPosition.fourthPosition[1]}`}
+            leftPos={`${teamImagesPosition.fourthPosition[0]}`}
+            topPos={`${teamImagesPosition.fourthPosition[1]}`}
             handleChange={() => handleChange(proj_devt, "proj_devt")}
           />
 
           <OverheadButton
-            topPos={`${teamImagesPosition.fifthPosition[0]}`}
-            leftPos={`${teamImagesPosition.fifthPosition[1]}`}
+            leftPos={`${teamImagesPosition.fifthPosition[0]}`}
+            topPos={`${teamImagesPosition.fifthPosition[1]}`}
             handleChange={() => handleChange(proj_devt_offr, "proj_devt_offr")}
           />
         </div>
