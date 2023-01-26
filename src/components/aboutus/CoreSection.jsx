@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import OverheadButton from "./OverheadButton";
 import CoreInformation from "./CoreInformation";
 
-const AboutUs2 = () => {
+const CoreSection = () => {
   const getPositionInImage = (pxLocation, pyLocation) => {
     const imgElem = document.querySelector("#sunshare_team_img");
     const cw = imgElem.clientWidth;
@@ -145,11 +145,11 @@ const AboutUs2 = () => {
 
   return (
     <div className="w-full flex flex-col justify-items-center align-items-center">
-      <div className="mt-[10rem]">
+      <div className="mt-[8vh]">
         <h4 className="font-Space-Grotesk font-black text-amber-500 text-center xl:text-[20px]">
           — Team —
         </h4>
-        <h1 className="w-full h-[5rem] font-Space-Grotesk font-black text-center xl:text-[30px]">
+        <h1 className="w-full font-Space-Grotesk font-black text-center xl:text-[30px]">
           The Sunshare Team
         </h1>
       </div>
@@ -211,4 +211,4 @@ const AboutUs2 = () => {
   );
 };
 
-export default AboutUs2;
+export default CoreSection;
