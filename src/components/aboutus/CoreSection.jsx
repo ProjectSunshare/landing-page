@@ -144,7 +144,7 @@ const CoreSection = () => {
   }
 
   return (
-    <div className="w-full flex flex-col justify-items-center align-items-center">
+    <div className="w-full flex flex-col dark:bg-[#243447] justify-items-center align-items-center">
       <div className="mt-[8vh]">
         <h4 className="font-Space-Grotesk font-black text-amber-500 text-center xl:text-[20px]">
           — Team —
