@@ -16,8 +16,8 @@ const About = () => {
   };
 
   return (
-    <div className="w-full dark:text-white dark:bg-[#0D1F31] bg-white drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
-      <div className="container w-full">
+    <div className=" dark:text-white dark:bg-[#0D1F31] bg-white drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
+      <div className="w-full">
         <SunShareSection
           onClickToImage={() => {
             scrollToSection(section2);

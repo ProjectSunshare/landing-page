@@ -1,6 +1,6 @@
 const CoreInformation = ({ text, image }) => {
   return (
-    <div className="bg-[#ffffff] dark:bg-[#0D1F31] mx-auto grid grid-cols-3  justify-items-center align-items-center">
+    <div className="bg-[#ffffff] dark:bg-[#243447] mx-auto grid grid-cols-3  justify-items-center align-items-center">
       <div className="scale-75 col-span-2 mx-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
         <div className="w-full h-full">
           <div className="rounded m-auto ">{<img src={image} alt="" />}</div>

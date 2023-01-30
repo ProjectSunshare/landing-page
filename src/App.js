@@ -21,7 +21,7 @@ function App() {
   return (
     <React.Fragment>
       <BrowserRouter>
-        <Mainpage setToDark={setToDark} />
+        <Mainpage setToDark={setToDark} isDark={isDark} />
       </BrowserRouter>
     </React.Fragment>
   );

@@ -2,7 +2,7 @@ import sunshareTokenImg from "../../assets/img/token/sunshareToken.svg";
 const SunShare = () => {
   return (
     <div className=" lg:grid lg:grid-cols-2 justify-items-center align-items-center lg:w-[100vw]">
-      <div>
+      <div className="pl-8">
         <h1 className="font-Space-Grotesk font-black text-left xl:text-[30px]">
           Sunshare Token
         </h1>
@@ -26,8 +26,12 @@ const SunShare = () => {
           tellus. Nunc sed id semper risus in.
         </p>
       </div>
-      <div>
-        <img src={sunshareTokenImg} alt="token-img" className="w-full" />
+      <div className="flex justify-center">
+        <img
+          src={sunshareTokenImg}
+          alt="token-img"
+          className="lg:w-full w-[60%]"
+        />
       </div>
     </div>
   );

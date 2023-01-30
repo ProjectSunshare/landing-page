@@ -3,12 +3,12 @@ import Navbar from "./navbar/Navbar";
 import Navpage from "./navbar/Navpage";
 import FooterBLK from "./footer/FooterBLK";
 import Footer from "./footer/Footer";
-const Mainpage = ({ setToDark }) => {
+const Mainpage = ({ setToDark, isDark }) => {
   return (
     <React.Fragment>
       <section className="overflow-x-hidden">
         <div className="h-[100px] w-full">
-          <Navbar setToDark={setToDark} />
+          <Navbar setToDark={setToDark} isDark={isDark} />
         </div>
         <div className="w-full">
           <Navpage />

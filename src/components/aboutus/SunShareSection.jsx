@@ -5,12 +5,12 @@ import SunShare from "./SunShare";
 const SunShareSection = ({ onClickToImage }) => {
   return (
     <div
-      className="flex flex-col justify-between md:items-start w-full h-full m-a pl-[5vw]"
+      className="flex flex-col justify-between md:items-start w-full h-full lg:pl-[5vw] p-4"
       data-aos="fade-right"
       data-aos-delay="500"
       data-aos-duration="1000">
       {/*--Title--*/}
-      <h1 className="mt-32  sm:mt-[30px] font-Space-Grotesk font-black text-[30px] text-center sm:text-left sm:text-[50px] mr-0 md:mr-3 lg:mr-4 xl:mr-8 2xl:mr-10">
+      <h1 className="mt-32 sm:mt-[30px] font-Space-Grotesk font-black text-[30px] text-center lg:text-left sm:text-[50px] mr-0 lg:mr-4 xl:mr-8 2xl:mr-10">
         Meet the people behind Sunshare
       </h1>
       <p className="w-full mt-[10px] sm:mt-[30px] lg:pr-[10rem] font-Poppins font-normal lg:text-left sm:text-[20px] drop-shadow-xl text-center">
