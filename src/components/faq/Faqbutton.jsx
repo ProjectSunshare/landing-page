@@ -8,13 +8,12 @@ const Results = () => (
 
 const Faqbutton = () => {
   const [showResults, setShowResults] = React.useState(false);
-  const onClick = () => setShowResults(true);
+  const onClick = () => setShowResults(!showResults);
   return (
     <div className="w-full w-11/12 mx-auto md:w-10/12 lg:w-1/2 px-3 mb-6 md:mb-0">
       <button
         onClick={onClick}
-        className="text-left appearance-none block w-full bg-[#000] text-[#FEA803] border rounded-lg py-5 px-4 mb-1 leading-tight"
-      >
+        className="text-left appearance-none block w-full bg-[#000] text-[#FEA803] border rounded-lg py-5 px-4 mb-1 leading-tight">
         <p className="inline">What is Sunshare?</p>
         <svg
           class="ml-2 w-4 h-4 inline"
@@ -22,17 +21,15 @@ const Faqbutton = () => {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          xmlns="http://www.w3.org/2000/svg">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M19 9l-7 7-7-7"
-          ></path>
+            d="M19 9l-7 7-7-7"></path>
         </svg>
       </button>
-      {showResults ? <Results /> : null}
+      {showResults && <Results />}
     </div>
   );
 };
