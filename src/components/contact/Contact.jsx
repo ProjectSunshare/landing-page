@@ -16,13 +16,12 @@ const Contact = () => {
         </h2>
       </div>
       {/*  */}
-      <form class="w-full lg:max-w-4xl lg:mx-auto">
+      <form className="w-full lg:max-w-4xl lg:mx-auto">
         <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full w-11/12 mx-auto md:w-10/12 lg:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="w-full mx-auto md:w-10/12 lg:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-first-name"
-            >
+              htmlFor="grid-first-name">
               Name
             </label>
             <input
@@ -32,11 +31,10 @@ const Contact = () => {
               placeholder="Name"
             />
           </div>
-          <div class="w-full w-11/12 mx-auto md:w-10/12 lg:w-1/2 px-3">
+          <div className="w-full mx-auto md:w-10/12 lg:w-1/2 px-3">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-last-name"
-            >
+              htmlFor="grid-last-name">
               Company
             </label>
             <input
@@ -48,11 +46,10 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full w-11/12 mx-auto md:w-10/12 lg:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="w-full  mx-auto md:w-10/12 lg:w-1/2 px-3 mb-6 md:mb-0">
             <label
               className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-first-name"
-            >
+              htmlFor="grid-first-name">
               Mail
             </label>
             <input
@@ -62,11 +59,10 @@ const Contact = () => {
               placeholder="Mail"
             />
           </div>
-          <div class="w-full w-11/12 mx-auto md:w-10/12 lg:w-1/2 px-3">
+          <div className="w-full mx-auto md:w-10/12 lg:w-1/2 px-3">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-last-name"
-            >
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-last-name">
               Phone
             </label>
             <input
@@ -78,11 +74,10 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-wrap -mx-3">
-          <div className="w-full w-11/12 mx-auto md:w-10/12 lg:w-full px-3">
+          <div className="w-full mx-auto md:w-10/12 lg:w-full px-3">
             <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-last-name"
-            >
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-last-name">
               Message
             </label>
             <textarea
@@ -91,16 +86,14 @@ const Contact = () => {
               id=""
               cols="30"
               rows="10"
-              placeholder="How can we help?"
-            ></textarea>
+              placeholder="How can we help?"></textarea>
           </div>
         </div>
         <div className="btn-container flex flex-wrap">
-          <div className="w-full w-11/12 mx-auto md:w-10/12 lg:w-full text-right">
+          <div className="w-full mx-auto md:w-10/12 lg:w-full text-right">
             <button
               className="py-3 px-10 rounded-md bg-[#000] text-white"
-              type="submit"
-            >
+              type="submit">
               Submit
             </button>
           </div>

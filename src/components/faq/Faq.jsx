@@ -14,7 +14,7 @@ const Faq = () => {
       <div className="large-title pb-14">
         <h2>Frequently Asked Questions</h2>
       </div>
-      <div class="w-full lg:max-w-4xl lg:mx-auto">
+      <div className="w-full lg:max-w-4xl lg:mx-auto">
         <div className="flex flex-wrap -mx-3 mb-6">
           <Faqbutton />
           <Faqbutton />
