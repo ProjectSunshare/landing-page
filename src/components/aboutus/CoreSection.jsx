@@ -23,8 +23,6 @@ const CoreSection = () => {
     //Viewport width unit (vw) = 100 * (Pixel Unit Size / Viewport width)
     const vw = 100 * (x / window.innerWidth);
     const vy = 100 * (y / window.innerHeight);
-    console.log(`100 * ((${y} + ${window.scrollY})/ ${window.innerHeight})`);
-    console.log(vw, vy);
     return [vw, vy];
   };
 
@@ -161,7 +159,7 @@ const CoreSection = () => {
           <img
             id="sunshare_team_img"
             src={sunshareteam}
-            className="w-[100vw] lg:h-[90vh] md:h-[70vh] h-[50vh]"
+            className="w-[100vw] h-auto"
             alt="acquisition"
             onLoad={() => {
               setImagePosition({

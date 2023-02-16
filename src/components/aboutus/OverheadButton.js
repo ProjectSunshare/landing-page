@@ -8,7 +8,7 @@ const OverheadButton = ({ topPos, leftPos, handleChange }) => {
       }}>
       <div className="">
         <button
-          className="w-5 h-full items-center z-10"
+          className="w-[3vw] h-full items-center z-10"
           onClick={handleChange}
           alt="project_engr">
           <svg
