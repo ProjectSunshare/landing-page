@@ -3,7 +3,7 @@ import Faqbutton from "./Faqbutton";
 
 const Faq = () => {
   return (
-    <div className="py-20">
+    <div className="pt-20">
       <div className="small-title text-center">
         <div className="small-title-container">
           <div className="left-dash text-[#FEA803] px-10 pt-1 inline">-</div>
