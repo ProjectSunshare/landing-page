@@ -9,6 +9,8 @@ import { MenuItems } from "./MenuItems";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Dropdown from "./Dropdown";
+import NavDrawer from "./NavDrawer";
 
 const Navbar = ({ setToDark, isDark }) => {
   useEffect(() => {
@@ -27,22 +29,24 @@ const Navbar = ({ setToDark, isDark }) => {
   const handleClick = () => setNav(!nav);
   const handleClose = () => setNav(!nav);
 
-  //event listener for click
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
-  }, []);
+  // // //event listener for click
+  // // useEffect(() => {
+  // //   document.addEventListener("click", handleClickOutside, true);
+  // // }, []);
 
-  //click reference
-  const menuRef = useRef();
+  // // //click reference
+  // // const menuRef = useRef();
 
-  //handle click outside
-  const handleClickOutside = (e) => {
-    if (menuRef.current !== null) {
-      if (!menuRef.current.contains(e.target)) {
-        setNav(false);
-      }
-    }
-  };
+  // // //handle click outside
+  // // const handleClickOutside = (e) => {
+  // //   if (menuRef.current) {
+  // //     console.log(menuRef);
+  // //     if (!menuRef.current.contains(e.target)) {
+  // //       console.log();
+  // //       setNav(false);
+  // //     }
+  // //   }
+  // };
 
   return (
     <div
@@ -151,88 +155,54 @@ const Navbar = ({ setToDark, isDark }) => {
           </button>
         </div>
 
-        <div
-          className="md:hidden bg-[#FEA803] border-2 border-black rounded-md"
-          onClick={handleClick}>
-          {!nav ? (
-            <Bars3Icon className="w-8" />
-          ) : (
-            <XCircleIcon className="w-8" />
-          )}
+        {/*Burger Button and Dark Button*/}
+        <div className="lg:hidden flex items-center justify-center">
+          <button
+            className="mx-2 h-[100%]"
+            onClick={() => {
+              setToDark();
+            }}>
+            {isDark ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="#ffffff"
+                className="w-6 h-6">
+                <path
+                  fillRule="evenodd"
+                  d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="30"
+                height="100%"
+                viewBox="0 0 30 30">
+                <path d="M 14.984375 0.98632812 A 1.0001 1.0001 0 0 0 14 2 L 14 5 A 1.0001 1.0001 0 1 0 16 5 L 16 2 A 1.0001 1.0001 0 0 0 14.984375 0.98632812 z M 5.796875 4.7988281 A 1.0001 1.0001 0 0 0 5.1015625 6.515625 L 7.2226562 8.6367188 A 1.0001 1.0001 0 1 0 8.6367188 7.2226562 L 6.515625 5.1015625 A 1.0001 1.0001 0 0 0 5.796875 4.7988281 z M 24.171875 4.7988281 A 1.0001 1.0001 0 0 0 23.484375 5.1015625 L 21.363281 7.2226562 A 1.0001 1.0001 0 1 0 22.777344 8.6367188 L 24.898438 6.515625 A 1.0001 1.0001 0 0 0 24.171875 4.7988281 z M 15 8 A 7 7 0 0 0 8 15 A 7 7 0 0 0 15 22 A 7 7 0 0 0 22 15 A 7 7 0 0 0 15 8 z M 2 14 A 1.0001 1.0001 0 1 0 2 16 L 5 16 A 1.0001 1.0001 0 1 0 5 14 L 2 14 z M 25 14 A 1.0001 1.0001 0 1 0 25 16 L 28 16 A 1.0001 1.0001 0 1 0 28 14 L 25 14 z M 7.9101562 21.060547 A 1.0001 1.0001 0 0 0 7.2226562 21.363281 L 5.1015625 23.484375 A 1.0001 1.0001 0 1 0 6.515625 24.898438 L 8.6367188 22.777344 A 1.0001 1.0001 0 0 0 7.9101562 21.060547 z M 22.060547 21.060547 A 1.0001 1.0001 0 0 0 21.363281 22.777344 L 23.484375 24.898438 A 1.0001 1.0001 0 1 0 24.898438 23.484375 L 22.777344 21.363281 A 1.0001 1.0001 0 0 0 22.060547 21.060547 z M 14.984375 23.986328 A 1.0001 1.0001 0 0 0 14 25 L 14 28 A 1.0001 1.0001 0 1 0 16 28 L 16 25 A 1.0001 1.0001 0 0 0 14.984375 23.986328 z"></path>
+              </svg>
+            )}
+          </button>
+
+          <div
+            className="md:hiisNavOpen dden bg-[#FEA803] border-2 border-black rounded-md"
+            onClick={handleClick}>
+            {!nav ? (
+              <Bars3Icon className="w-8" />
+            ) : (
+              <XCircleIcon className="w-8" />
+            )}
+          </div>
         </div>
       </div>
+
       {/* end normal navbar */}
 
       {/* start drop down menu */}
-      <ul
-        className={
-          !nav ? "hidden" : "Absolute bg-slate-50 w-full px-8 md:hidden"
-        }
-        ref={menuRef}
-        data-aos="fade-down">
-        <div className="mx-2 mt-2 flex pt-3">
-          <div className="max-w-lg w-full lg:max-w-xs text-gray-600">
-            <label htmlFor="search" className="sr-only">
-              Search
-            </label>
-            <form method="get" action="#" className="relative z-50">
-              <button
-                type="submit"
-                id="searchsubmit"
-                className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg
-                  className="h-5 w-5 text-gray-400"
-                  fill="currentColor"
-                  viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                    clipRule="evenodd"></path>
-                </svg>
-              </button>
-              <input
-                type="search"
-                name="search"
-                id="search"
-                className="block w-full pl-10 pr-3 py-2 border-2 border-black rounded-md leading-5 bg-white text-gray-600 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out"
-                placeholder="Search"
-              />
-            </form>
-          </div>
-
-          <button
-            id="darkMode"
-            className="mx-2"
-            onClick={() => {
-              console.log("???");
-            }}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-6 h-6">
-              <path
-                fillRule="evenodd"
-                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <div className="mx-2 mt-2 pb-5">
-          <button
-            className="py-1.5 max-w-lg w-full lg:max-w-xs
-                          bg-[#FEA803]
-                          text-white
-                          border-2 border-black
-                          hover:bg-[#F7931E] hover:text-white
-                          rounded-lg
-                          ">
-            Launch App
-          </button>
-        </div>
-      </ul>
+      <NavDrawer isNavOpen={nav} />
       {/* end drop down menu */}
     </div>
   );
