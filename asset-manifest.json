@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8748a1bd.css",
-    "main.js": "/static/js/main.ce2d4f9e.js",
+    "main.css": "/static/css/main.d6265a85.css",
+    "main.js": "/static/js/main.63885feb.js",
     "static/media/sunshareToken.svg": "/static/media/sunshareToken.1bf7f482ab0da8c1ca6826ac9e605383.svg",
     "static/media/sunshare_team.JPG": "/static/media/sunshare_team.c1bcaf9f9b9eb4a4a704.JPG",
     "static/media/proj_devt.png": "/static/media/proj_devt.7b0ebdd4a20e40e61413.png",
@@ -32,11 +32,11 @@
     "static/media/polygon.svg": "/static/media/polygon.2f48ca1f9974da49d7bc.svg",
     "index.html": "/index.html",
     "static/media/ethereum.svg": "/static/media/ethereum.9f3bd21910d826ce8bb3.svg",
-    "main.8748a1bd.css.map": "/static/css/main.8748a1bd.css.map",
-    "main.ce2d4f9e.js.map": "/static/js/main.ce2d4f9e.js.map"
+    "main.d6265a85.css.map": "/static/css/main.d6265a85.css.map",
+    "main.63885feb.js.map": "/static/js/main.63885feb.js.map"
   },
   "entrypoints": [
-    "static/css/main.8748a1bd.css",
-    "static/js/main.ce2d4f9e.js"
+    "static/css/main.d6265a85.css",
+    "static/js/main.63885feb.js"
   ]
 }
