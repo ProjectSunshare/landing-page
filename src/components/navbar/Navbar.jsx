@@ -156,7 +156,7 @@ const Navbar = ({ setToDark, isDark }) => {
         </div>
 
         {/*Burger Button and Dark Button*/}
-        <div className="lg:hidden flex items-center justify-center">
+        <div className="flex md:hidden items-center justify-center">
           <button
             className="mx-2 h-[100%]"
             onClick={() => {

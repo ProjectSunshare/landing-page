@@ -34,7 +34,7 @@ const MainBlog = ({}) => {
   }, []);
   return (
     <div>
-      <div className="flex w-full bg-[#FEA803] items-center justify-center max-h-[70vh] overflow-hidden">
+      <div className="flex  w-full bg-[#FEA803] items-center justify-center max-h-[70vh] overflow-hidden">
         <img src={`${blog.blogImageUrl}`} className="w-[100%]" />
       </div>
 
@@ -59,7 +59,9 @@ const MainBlog = ({}) => {
       <div className="flex gap-8 overflow-x-scroll p-11">
         {blog.blogImageList &&
           blog.blogImageList.map((imageLink) => {
-            return <img src={imageLink} className="max-w-[40vw]" />;
+            return (
+              <img src={imageLink} className="max-w[60vw] md:max-w-[40vw]" />
+            );
           })}
       </div>
     </div>
