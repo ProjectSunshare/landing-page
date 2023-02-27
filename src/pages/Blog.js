@@ -21,6 +21,7 @@ const Blog = () => {
             return (
               <ImportantBlogCard
                 key={blog.id}
+                blogId={blog.id}
                 profileImageUrl={blog.profileImageUrl}
                 blogImageUrl={blog.blogImageUrl}
                 blogTextContent={blog.blogTextContent}
@@ -34,6 +35,7 @@ const Blog = () => {
             return (
               <BlogCard
                 key={blog.id}
+                blogId={blog.id}
                 profileImageUrl={blog.profileImageUrl}
                 blogImageUrl={blog.blogImageUrl}
                 blogTextContent={blog.blogTextContent}

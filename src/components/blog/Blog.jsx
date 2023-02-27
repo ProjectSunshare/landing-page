@@ -19,9 +19,11 @@ const Blog = () => {
       </div>
       <div className="xl:grid xl:grid-cols-2 flex flex-wrap mr-10 ml-10 gap-5">
         {dummyBlogs.slice(0, 2).map((blog) => {
+          console.log(blog);
           return (
             <ImportantBlogCard
               key={blog.id}
+              blogId={blog.id}
               profileImageUrl={blog.profileImageUrl}
               blogImageUrl={blog.blogImageUrl}
               blogTextContent={blog.blogTextContent}
@@ -35,6 +37,7 @@ const Blog = () => {
           return (
             <BlogCard
               key={blog.id}
+              blogId={blog.id}
               profileImageUrl={blog.profileImageUrl}
               blogImageUrl={blog.blogImageUrl}
               blogTextContent={blog.blogTextContent}

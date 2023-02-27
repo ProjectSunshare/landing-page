@@ -10,8 +10,10 @@ const Support = () => {
       <div
         className="w-full  dark:text-white"
         style={{
-          backgroundImage: "url()",
+          backgroundImage:
+            "url( 'https://media.istockphoto.com/id/1310384629/photo/solar-panel-cell-on-dramatic-sunset-sky-background-clean-alternative-power-energy-concept.jpg?b=1&s=170667a&w=0&k=20&c=6PFVI-Ek0jrcEYkiAXyuD-RUTvGnadNgLny8ChXAve4=' )",
           backgroundSize: "cover",
+          opacity: "0.5",
         }}>
         <div className="container m-auto">
           <SupportSect />

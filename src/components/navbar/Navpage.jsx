@@ -5,6 +5,7 @@ import About from "../../pages/About";
 import Blog from "../../pages/Blog";
 import Support from "../../pages/Support";
 import NotFound from "../../pages/NotFound";
+import MainBlog from "../blog/MainBlog";
 
 const Navpage = () => {
   return (
@@ -18,6 +19,7 @@ const Navpage = () => {
         {/* <Route path="/landing-page" element={<Home />}/> */}
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<MainBlog />} />
         <Route path="/support" element={<Support />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

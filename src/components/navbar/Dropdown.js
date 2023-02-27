@@ -7,6 +7,7 @@ const Dropdown = ({ isNavActive }) => {
       className={
         !isNavActive ? "hidden" : "Absolute bg-slate-50 w-full px-8 md:hidden"
       }
+      navB
       ref={menuRef}
       data-aos="fade-down">
       <div className="mx-2 mt-2 flex pt-3">
