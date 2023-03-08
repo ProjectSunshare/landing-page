@@ -50,6 +50,6 @@ const blogSix = {
   blogTextContent: "Quisque pretium quam vitae tortor non odio vitae.",
   blogDate: "March 17, 4001",
 };
-
+//https://drive.google.com/uc?export=view&id=
 const dummyBlogs = [blogOne, blogTwo, blogThree, blogFour, blogFive, blogSix];
 export { dummyBlogs };
