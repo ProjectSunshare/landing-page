@@ -1,7 +1,7 @@
 import BlogCard from "../components/blog/BlogCard";
-import { dummyBlogs } from "../customModules/dummyBlogs";
+import sunShareTokenImg from "../assets/img/token/sunshareToken.svg";
 import ImportantBlogCard from "../components/blog/ImportantBlogCard";
-
+import blogs from "../customModules/blogs.json";
 const Blog = () => {
   return (
     <div className="w-full py-36 dark:bg-[#0D1F31] dark:text-white">
@@ -17,32 +17,36 @@ const Blog = () => {
       </div>
       <div>
         <div className="xl:grid xl:grid-cols-2 flex flex-wrap mr-10 ml-10 gap-5">
-          {dummyBlogs.slice(0, 2).map((blog) => {
-            return (
-              <ImportantBlogCard
-                key={blog.id}
-                blogId={blog.id}
-                profileImageUrl={blog.profileImageUrl}
-                blogImageUrl={blog.blogImageUrl}
-                blogTextContent={blog.blogTextContent}
-                blogDate={blog.blogDate}
-              />
-            );
-          })}
+          {Object.values(blogs)
+            .slice(0, 2)
+            .map((blog) => {
+              return (
+                <ImportantBlogCard
+                  key={blog.id}
+                  blogId={blog.id}
+                  profileImageUrl={sunShareTokenImg}
+                  blogImageUrl={blog.blogImageUrls[0]}
+                  blogTextContent={blog.blogTextContent}
+                  blogDate={blog.blogDate}
+                />
+              );
+            })}
         </div>
         <div className="xl:grid xl:grid-cols-3  flex gap-5 flex-wrap mr-10 ml-10 ">
-          {dummyBlogs.slice(2, dummyBlogs.length - 1).map((blog) => {
-            return (
-              <BlogCard
-                key={blog.id}
-                blogId={blog.id}
-                profileImageUrl={blog.profileImageUrl}
-                blogImageUrl={blog.blogImageUrl}
-                blogTextContent={blog.blogTextContent}
-                blogDate={blog.blogDate}
-              />
-            );
-          })}
+          {Object.values(blogs)
+            .slice(2, Object.values(blogs).length - 1)
+            .map((blog) => {
+              return (
+                <BlogCard
+                  key={blog.id}
+                  blogId={blog.id}
+                  profileImageUrl={sunShareTokenImg}
+                  blogImageUrl={blog.blogImageUrls[0]}
+                  blogTextContent={blog.blogTextContent}
+                  blogDate={blog.blogDate}
+                />
+              );
+            })}
         </div>
       </div>
     </div>

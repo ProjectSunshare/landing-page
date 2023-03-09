@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { dummyBlogs } from "../../customModules/dummyBlogs.js";
-
+import blogs from "../../customModules/blogs.json";
 const MainBlog = ({}) => {
   const { id } = useParams();
   const [blog, setBlog] = useState({});
   useEffect(() => {
     const fakeFetchOfBlog = async (id) => {
-      const newBlog = dummyBlogs.find((blog) => {
+      const newBlog = Object.values(blogs).find((blog) => {
         if (parseInt(blog.id) === parseInt(id)) {
           return {
             ...blog,
@@ -17,13 +17,6 @@ const MainBlog = ({}) => {
 
       return {
         ...newBlog,
-        blogImageList: [
-          newBlog.blogImageUrl,
-          newBlog.blogImageUrl,
-          newBlog.blogImageUrl,
-          newBlog.blogImageUrl,
-          newBlog.blogImageUrl,
-        ],
       };
     };
 
@@ -35,7 +28,9 @@ const MainBlog = ({}) => {
   return (
     <div>
       <div className="flex  w-full bg-[#FEA803] items-center justify-center max-h-[70vh] overflow-hidden">
-        <img src={`${blog.blogImageUrl}`} className="w-[100%]" />
+        {blog.blogImageUrls && (
+          <img src={`${blog.blogImageUrls[0]}`} className="w-[100%]" />
+        )}
       </div>
 
       <div className="p-11">
@@ -57,8 +52,8 @@ const MainBlog = ({}) => {
         </p>
       </div>
       <div className="flex gap-8 overflow-x-scroll p-11">
-        {blog.blogImageList &&
-          blog.blogImageList.map((imageLink) => {
+        {blog.blogImageUrls &&
+          blog.blogImageUrls.map((imageLink) => {
             return (
               <img src={imageLink} className="max-w[60vw] md:max-w-[40vw]" />
             );

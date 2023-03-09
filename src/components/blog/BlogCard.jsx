@@ -27,7 +27,9 @@ const BlogCard = ({
                 alt="User"
               />
             </div>
-            <h3 className="text-[2.4vh]">{blogTextContent}</h3>
+            <h3 className="text-[2.4vh] overflow-y-scroll h-[80%]">
+              {blogTextContent}
+            </h3>
             <p className="text-[2vh]">{blogDate}</p>
           </div>
         </div>
