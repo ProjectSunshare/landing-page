@@ -41,13 +41,20 @@ const MainBlog = ({}) => {
             <div className="right-dash text-[#FEA803] px-10 inline">-</div>
           </div>
         </div>
-        <h2>BLOG TITLE</h2>
+        <h2>{blog.blogTitle}</h2>
+        <h3 className="flex justify-center items-center gap-2">
+          by: {blog.authorName}{" "}
+          <img
+            src={blog.authorImageUrl}
+            className=" object-cover max-w-[50px] 2xl:w-[6vw] max-h-[80px] min-w-[30px] min-h-[50px] rounded-full"
+          />
+        </h3>
       </div>
 
       <div className="bg-[#D9D9D9] ">
         <p
           aria-label="Blog text content"
-          className="w-full text-center p-11 min-h-[40vh]">
+          className="w-full text-justify p-11 md:px-[20vw] min-h-[40vh]">
           {blog.blogTextContent}
         </p>
       </div>

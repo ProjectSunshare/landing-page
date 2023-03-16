@@ -24,9 +24,9 @@ const Blog = () => {
                 <ImportantBlogCard
                   key={blog.id}
                   blogId={blog.id}
-                  profileImageUrl={sunShareTokenImg}
+                  profileImageUrl={blog.authorImageUrl}
                   blogImageUrl={blog.blogImageUrls[0]}
-                  blogTextContent={blog.blogTextContent}
+                  blogTextContent={blog.blogTitle}
                   blogDate={blog.blogDate}
                 />
               );
@@ -40,9 +40,9 @@ const Blog = () => {
                 <BlogCard
                   key={blog.id}
                   blogId={blog.id}
-                  profileImageUrl={sunShareTokenImg}
+                  profileImageUrl={blog.authorImageUrl}
                   blogImageUrl={blog.blogImageUrls[0]}
-                  blogTextContent={blog.blogTextContent}
+                  blogTextContent={blog.blogTitle}
                   blogDate={blog.blogDate}
                 />
               );

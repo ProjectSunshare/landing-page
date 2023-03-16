@@ -7,6 +7,8 @@ const BlogCard = ({
   blogImageUrl,
   blogTextContent,
   blogDate,
+  blogTitle,
+  blogAuthor,
 }) => {
   return (
     <div className="blog-container mx-auto w-full">
@@ -23,13 +25,11 @@ const BlogCard = ({
             <div className="avatar absolute -top-7 left-2 ">
               <img
                 src={profileImageUrl}
-                className="rounded-full border-8 border-[#D9D9D9] bottom-[70px] w-full h-20 "
+                className="rounded-full border-8 border-[#D9D9D9] object-cover max-w-[80px] bottom-[70px] w-full h-20 "
                 alt="User"
               />
             </div>
-            <h3 className="text-[2.4vh] overflow-y-scroll h-[80%]">
-              {blogTextContent}
-            </h3>
+            <h3 className="text-[2.4vh] h-[80%]">{blogTextContent}</h3>
             <p className="text-[2vh]">{blogDate}</p>
           </div>
         </div>
