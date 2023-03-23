@@ -33,10 +33,6 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full text-black text-center drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
-        <Divider1 />
-      </div>
-
       <div className="w-full bg-white text-black text-center dark:bg-[#0D1F31] dark:text-white">
         <div className="container m-auto">
           <Token />

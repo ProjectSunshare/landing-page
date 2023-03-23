@@ -1,10 +1,11 @@
 import React from "react";
 
 import BlogCard from "./BlogCard";
-import { dummyBlogs } from "../../customModules/dummyBlogs";
+import blogsObj from "../../customModules/blogs.json";
 import ImportantBlogCard from "./ImportantBlogCard";
 
 const Blog = () => {
+  const blogs = Object.values(blogsObj);
   return (
     <div className="w-full py-36 dark:bg-[#0D1F31]">
       <div className="small-title text-center">
@@ -18,29 +19,29 @@ const Blog = () => {
         <h2>Thought Starters</h2>
       </div>
       <div className="xl:grid xl:grid-cols-2 flex flex-wrap mr-10 ml-10 gap-5">
-        {dummyBlogs.slice(0, 2).map((blog) => {
+        {blogs.slice(0, 2).map((blog) => {
           console.log(blog);
           return (
             <ImportantBlogCard
               key={blog.id}
               blogId={blog.id}
-              profileImageUrl={blog.profileImageUrl}
-              blogImageUrl={blog.blogImageUrl}
-              blogTextContent={blog.blogTextContent}
+              profileImageUrl={blog.authorImageUrl}
+              blogImageUrl={blog.blogImageUrls[0]}
+              blogTextContent={blog.blogTitle}
               blogDate={blog.blogDate}
             />
           );
         })}
       </div>
       <div className="xl:grid xl:grid-cols-3  flex gap-5 flex-wrap mr-10 ml-10 ">
-        {dummyBlogs.slice(2, dummyBlogs.length - 1).map((blog) => {
+        {blogs.slice(2, blogs.length - 1).map((blog) => {
           return (
             <BlogCard
               key={blog.id}
               blogId={blog.id}
-              profileImageUrl={blog.profileImageUrl}
-              blogImageUrl={blog.blogImageUrl}
-              blogTextContent={blog.blogTextContent}
+              profileImageUrl={blog.authorImageUrl}
+              blogImageUrl={blog.blogImageUrls[0]}
+              blogTextContent={blog.blogTitle}
               blogDate={blog.blogDate}
             />
           );
