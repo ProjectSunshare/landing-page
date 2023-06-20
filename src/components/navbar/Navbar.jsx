@@ -143,6 +143,7 @@ const Navbar = ({ setToDark, isDark }) => {
             </button>
           </div>
           <button
+			onClick={() => window.open('http://192.168.0.136:3000', '_blank').focus()}
             className="px-6 py-2
                            bg-[#FEA803]
                            text-white
